@@ -1,34 +1,5 @@
 ## AI Low-Level Refactoring (**AILLR**)
 
-Definition: For AI scenarios, it refers to the re-implementation of core logic from high-level user-friendly languages (Python) to low-level high-performance languages (C++).
-
-- "AI": the field of artificial intelligence;
-- "Low-level": the low-level features of the target language (C++), such as being hardware-close, high-performance, and system-level;
-- "Refactoring": re-implementing in a way more suitable for the scenario while keeping the functional logic unchanged.
-
-Core logic: First explore and implement the core logic of AI functions in Python, then re-implement the core logic in C++ while maintaining functional consistency.
-
-Purpose: To decentralize the control of AI technology from a few giants to the entire community and manufacturers. Mobile phones are the most inclusive intelligent hardware; implementing the design on mobile phones allows "democratic AI" to move from an idea to the public (mobile phone + cloud = smart phone).
-
-**Dual-Layer Architecture Design**:
-
-- Core Layer: Implement general logic in standard C++, with strictly standardized code to ensure long-term stability.
-- Adapter Layer: Interface implementation for specific hardware.
-
-**Core maintainers focus on the core layer to ensure standardization and stability**
-
-The core layer implements general logic in standard C++ and does not involve any hardware/system-related code:
-
-- All manufacturers develop based on the same set of core logic.
-- As core maintainers, they can focus on logic optimization, bug fixes, and long-term iterations, unaffected by specific hardware changes, ensuring long-term stability.
-- Concentrate efforts on maintaining core logic to avoid redundant development of basic functions by manufacturers.
-
-**Manufacturers are responsible for the adapter layer**
-
-Manufacturers (such as mobile phone brands, chip manufacturers, embedded device vendors) write adaptation code for their own hardware (e.g., NPU driver calls, sensor data parsing, hardware acceleration logic) based on the standard interfaces of the core layer. Because manufacturers know their own hardware characteristics best, and different manufacturers have different product positioning.
-
-<u>To make this model run smoothly, the core is to design good interfaces between the core layer and the adapter layer</u>
-
 Currently designed rules:
 
 1. Interface Design: **Abstract, Minimal, Stable**
