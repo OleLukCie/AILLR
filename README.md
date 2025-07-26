@@ -1,4 +1,11 @@
 ## AI Low-Level Refactoring (**AILLR**)
+---
+#Experimental code is placed in the "dev" branch https://github.com/OleLukCie/AILLR/tree/dev
+#and will not be merged into the main branch until fully implemented.
+
+###### If there are any errors or inadequacies, please point them out.
+
+---
 
 Currently designed rules:
 
@@ -38,15 +45,3 @@ The interfaces (APIs) exposed by the core layer to the outside need to meet thre
 **Layered Support System**: Provide differentiated documents for different roles (application developers refer to API manuals, secondary developers refer to interface principles, core maintainers refer to C++ design specifications), and establish a "newbie-friendly" community mutual assistance mechanism (such as PR guidance, common error checklists).
 
 The core functions of any programming language are essentially implementations of "computational logic", and computational logic itself is language-agnostic. Therefore, **as long as the functional logic of a Python library is clear, it can theoretically be re-implemented in C++**, including declaring interfaces through C++ header files (`.h`) and implementing functions in source files (`.cpp`).
-
----
-
-###### If there are any errors or inadequacies, please point them out.
-
----
-
-Dēorlic gemynd, of nihte cōm
-
-John
-
-July 25, 2025
